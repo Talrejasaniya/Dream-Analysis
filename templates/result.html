@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dream Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dark-blue-box"> <div> 
+        <h1>Dream Analysis Result</h1>
+        <div class="analysis-output">
+            {{ analysis|safe }}
+        </div>
+        <a href="/" class="analyze-another-button">Analyze another dream</a>
+    </div>
+</body>
+</html>

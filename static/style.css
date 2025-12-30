@@ -1,0 +1,226 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for vertical centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Make the body take up the full viewport height */
+    color: #fff;
+}
+
+.dark-blue-box {
+    background-color: rgba(44, 62, 80, 0.9); /* Dark blue color with transparency */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+h2 {
+    color: #3498db; /* Example accent color */
+    margin-top: 30px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+h3 {
+    color: #ecf0f1;
+    font-size: 1.5em;
+    font-weight: 2000;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #bdc3c7;
+    font-size: 1.2em;
+}
+
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #34495e;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: #2c3e50; /* Slightly darker background for textarea */
+    color: #ecf0f1;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+input[type="submit"] {
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Gradient for button */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #2980b9, #1c598a); /* Slightly darker gradient on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+p {
+    color: #ecf0f1;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+.error {
+    color: whitesmoke;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Analysis output styles */
+.analysis-output {
+    text-align: left;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.analysis-output ul {
+    padding-left: 0;
+    margin-left: 0;
+    text-align: left;
+}
+
+.analysis-output li {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .dark-blue-box {
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    textarea {
+        font-size: 14px;
+    }
+
+    input[type="submit"] {
+        padding: 12px 25px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dark-blue-box {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    textarea {
+        font-size: 12px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 12px;
+    }
+}
+
+/* Loading indicator styles */
+#loading {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+}
+
+.analyze-another-button {
+    background: linear-gradient(135deg, #3498db, #2980b9); /* Match the gradient */
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Match padding */
+    border-radius: 10px; /* Match border radius */
+    cursor: pointer;
+    font-size: 16px; /* Match font size */
+    font-weight: 500; /* Match font weight */
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Make it behave like a block element */
+    margin-top: 20px; /* Add some space */
+}
+
+.analyze-another-button:hover {
+    background: linear-gradient(135deg, #2980b9, #1c598a); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Subtle lift on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}

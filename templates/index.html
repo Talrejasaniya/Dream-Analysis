@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing New Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="dark-blue-box"> <div> 
+        <h1>Dream Analyzer</h1>
+        <form action="/analyze-dream" method="post">
+            <label for="dream_description">Describe your dream:</label><br>
+            <textarea id="dream_description" name="dream_description" rows="4" cols="50" placeholder="Enter your dream here..."></textarea><br>
+            <input type="submit" value="Analyze Dream">
+        </form>
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+        <div id="loading" style="display: none;">Loading...</div>
+    </div>
+    <script>
+        const form = document.querySelector('form');
+        const loading = document.getElementById('loading');
+
+        form.addEventListener('submit', () => {
+            loading.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
